@@ -32,8 +32,6 @@ public class Book {
         this.authorList = new ArrayList<>();
     }
 
-    // Getters and setters
-
     /**
      * Returns the ISBN of the book.
      *
