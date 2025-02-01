@@ -28,9 +28,7 @@ public class Author {
         this.lastName = lastName;
         this.bookList = new ArrayList<>();
     }
-
-    // Getters and setters
-
+    
     /**
      * Returns the author's ID.
      *
