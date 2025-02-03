@@ -25,8 +25,10 @@ public class BookDatabaseManager {
      * Constructs a BookDatabaseManager object and initializes the connection.
      */
     public BookDatabaseManager() {
+        
         books = new ArrayList<>();
         authors = new ArrayList<>();
+        
         try {
             connect();
         } catch (SQLException e) {
@@ -56,7 +58,9 @@ public class BookDatabaseManager {
      * Loads all books from the 'titles' table.
      */
     private void loadBooks() {
+        
         String sql = "SELECT * FROM titles";
+        
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
@@ -76,7 +80,9 @@ public class BookDatabaseManager {
      * Loads all authors from the 'authors' table.
      */
     private void loadAuthors() {
+        
         String sql = "SELECT * FROM authors";
+        
         try (PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
